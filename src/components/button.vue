@@ -1,7 +1,7 @@
 <template>
   <button class="cj-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
-    <g-icon class="loading icon" v-if='loading' name="loading"></g-icon>
-    <g-icon class="icon" :name="icon" v-if="icon&& !loading"></g-icon>
+    <cj-icon class="loading icon" v-if='loading' name="loading"></cj-icon>
+    <cj-icon class="icon" :name="icon" v-if="icon && !loading"></cj-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -12,7 +12,7 @@ import Icon from "@/components/icon.vue";
 export default {
   name: "Cj-button",
   components: {
-    "g-icon": Icon
+    "cj-icon": Icon
   },
   props: {
     icon: {},
@@ -30,8 +30,9 @@ export default {
   }
 };
 </script>
-<style lang='scss' scoped >
+<style lang='scss' scoped>
 @import "@/assets/main.scss";
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -54,6 +55,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: $button-bg;
+  color:$color;
   &:hover {
     border-color: $border-color-hover;
   }
