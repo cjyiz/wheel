@@ -19,7 +19,12 @@
     <cj-icon name="error">图标</cj-icon>
 
   </div>
-    
+    <div class='group'>
+      <cj-input  disabled value='我是第一'></cj-input>
+      <cj-input  readonly value='我是第二'></cj-input>
+      <cj-input value='我是第三'></cj-input>
+      <cj-input value='我是第四' error='姓名不能超过2个字'></cj-input>
+    </div>
     <cj-footer></cj-footer>
   </div>
 </template>
@@ -29,6 +34,7 @@ import Button from "@/components/button";
 import Icon from "@/components/icon";
 import ButtonGroup from "@/components/buttonGroup.vue";
 import Footer from "@/components/footer";
+import Input from "@/components/input";
 export default {
   data(){
     return{
@@ -43,7 +49,8 @@ export default {
     "cj-button": Button,
     "cj-icon": Icon,
     "cj-button-group": ButtonGroup,
-    "cj-footer": Footer
+    "cj-footer": Footer,
+    "cj-input":Input
   }
 };
 </script>
