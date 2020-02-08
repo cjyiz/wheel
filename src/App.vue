@@ -51,10 +51,12 @@
     <div class="group">
       <cj-sider>滑动</cj-sider>
     </div>
-
-
     <div class='group'>
       <cj-layout>网格布局</cj-layout>
+    </div>
+
+    <div class='tab'>
+      <cj-tab></cj-tab>
     </div>
     <cj-footer></cj-footer>
   </div>
@@ -71,6 +73,7 @@ import Row from "@/components/row";
 import Col from "@/components/col";
 import Sider from "@/components/sider";
 import Layout from "@/components/layout";
+import Tab from "@/components/tab"
 export default {
   data() {
     return {
@@ -91,7 +94,8 @@ export default {
     "cj-row": Row,
     "cj-sider": Sider,
     "cj-col": Col,
-    "cj-layout":Layout
+    "cj-layout":Layout,
+    "cj-tab": Tab
   }
 };
 </script>
@@ -103,5 +107,9 @@ export default {
   > span {
     margin-right: 20px;
   }
+}
+.tab{
+  height: 300px;
+  widows: 800px;
 }
 </style>
